@@ -6,6 +6,7 @@ const DashboardPage = () => {
       <div>
         <h1>Dashboard</h1>
         <Link href="/">Home</Link>
+        <Link href="/dashboard/issues">Home</Link>
       </div>
     </>
   );
