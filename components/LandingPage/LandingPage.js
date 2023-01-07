@@ -1,6 +1,5 @@
-import { use, useState } from "react";
-
 import Link from "next/link";
+import { useState } from "react";
 
 const LandingPage = ({}) => {
   const [logged, setLogged] = useState(false);
