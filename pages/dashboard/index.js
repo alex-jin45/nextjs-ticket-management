@@ -1,27 +1,30 @@
 import Link from "next/link";
 import ProjectCard from "../../components/MainDashboard/ProjectCard";
 
-const DUMMY_DATA = [
+export const DUMMY_DATA = [
   {
     id: 1,
-    title: "Frontend - Web",
+    title: "Frontend -",
     issueNumber: 73,
     last24: 12,
+    lang: "React",
     status: "Error",
   },
   {
     id: 2,
-    title: "Backend",
-    issueNumber: 73,
-    last24: 12,
-    status: "Error",
+    title: "Backend -",
+    issueNumber: 25,
+    last24: 2,
+    lang: "Node.js",
+    status: "Warning",
   },
   {
     id: 3,
-    title: "Frontend - Web",
-    issueNumber: 73,
-    last24: 12,
-    status: "Error",
+    title: "ML Services -",
+    issueNumber: 0,
+    last24: 0,
+    lang: "Python",
+    status: "Info",
   },
 ];
 
@@ -35,7 +38,18 @@ const DashboardPage = () => {
           Overview of your projects sorted by total issues.
         </span>
       </div>
-      <ProjectCard />
+      {DUMMY_DATA.map((card) => {
+        return (
+          <ProjectCard
+            key={card.id}
+            lang={card.lang}
+            last24={card.last24}
+            title={card.title}
+            status={card.status}
+            issueNumber={card.issueNumber}
+          />
+        );
+      })}
     </>
   );
 };
