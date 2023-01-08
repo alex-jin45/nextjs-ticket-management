@@ -1,11 +1,11 @@
-import DashboardNav from "../DashboardNav/DashboardNav";
+import Navigation from "../Navigation/Navigation";
 
 const Layout = ({ children }) => {
   return (
     <>
-      <DashboardNav>
+      <Navigation>
         <main className="">{children}</main>
-      </DashboardNav>
+      </Navigation>
     </>
   );
 };
