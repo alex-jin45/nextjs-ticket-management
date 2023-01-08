@@ -51,7 +51,7 @@ const Navigation = ({ children }) => {
         </div>
       </div>
       <div className="w-full h-full p-4 m-8 overflow-y-auto">
-        <div className="flex items-center justify-center p-40 ">{children}</div>
+        <div className="">{children}</div>
       </div>
     </div>
   );
