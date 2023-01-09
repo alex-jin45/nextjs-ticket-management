@@ -1,31 +1,40 @@
 import { FaReact } from "react-icons/fa";
 
-const TableRow = ({}) => {
+const TableRow = ({
+  errorType,
+  errorLoc,
+  errorDesc,
+  status,
+  numEvents,
+  usersEffected,
+}) => {
   return (
     <>
-      <tr className="border-b-1">
+      <tr className="border-b-2">
         <td className="flex  items-center p-4">
-          <FaReact className="mr-4 text-2xl " />
+          <FaReact className="mr-4 text-2xl" />
           <div>
             <div>
-              <span>TypeError :&nbsp;</span>
-              Cannot read properties of undefined (reading length)
+              <span>{errorType} :&nbsp;</span>
+              <span>{errorDesc}</span>
             </div>
-            <div>at eval (webpack-internal:///./pages/index.tsx:37:7)</div>
+            <div>
+              <span>{errorLoc}</span>
+            </div>
           </div>
         </td>
 
-        <td className=" p-4">
+        <td className="p-4">
           <div className="w-fit flex p-2 items-center h-5 rounded-md">
-            <span>Error</span>
+            <span>{status}</span>
           </div>
         </td>
         <td className=" p-4">
-          <span>105</span>
+          <span>{numEvents}</span>
         </td>
 
         <td className=" p-4">
-          <span>105</span>
+          <span>{usersEffected}</span>
         </td>
       </tr>
     </>
