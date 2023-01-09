@@ -3,6 +3,7 @@ import TableRow from "./TableRow";
 const TABLE_DATA = [
   {
     id: 1,
+    page: 1,
     errorType: "Type Error :",
     errorDesc: "Cannot read properties of undefined (reading length)",
     errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
@@ -12,6 +13,7 @@ const TABLE_DATA = [
   },
   {
     id: 2,
+    page: 1,
     errorType: "Type Error :",
     errorDesc: "Cannot read properties of undefined (reading length)",
     errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
@@ -21,6 +23,7 @@ const TABLE_DATA = [
   },
   {
     id: 3,
+    page: 1,
     errorType: "Type Error :",
     errorDesc: "Cannot read properties of undefined (reading length)",
     errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
