@@ -19,7 +19,7 @@ const Navigation = ({ children }) => {
               <ul>
                 <li>
                   <Link
-                    className={`flex items-center px-4 py-2 text-gray-700 active:bg-gray-400 rounded-md ${
+                    className={`flex items-center px-4 py-2 text-gray-700  rounded-md ${
                       router.pathname === "/dashboard" ? "bg-gray-400" : null
                     }`}
                     href="/dashboard"

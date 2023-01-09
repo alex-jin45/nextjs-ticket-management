@@ -10,7 +10,7 @@ const TableRow = ({
 }) => {
   return (
     <>
-      <tr className="border-b-2">
+      <tr className="border-b-2 hover:bg-slate-400">
         <td className="flex  items-center p-4">
           <FaReact className="mr-4 text-2xl" />
           <div>

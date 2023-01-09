@@ -33,7 +33,7 @@ const DashboardPage = () => {
     <>
       <div>
         {/* maybe put into own component */}
-        <h1 className="text-2xl mb-4">Projects</h1>
+        <h1 className="text-3xl mb-4">Projects</h1>
         <span className="text-sm text-gray-400">
           Overview of your projects sorted by total issues.
         </span>

@@ -33,7 +33,7 @@ const TABLE_DATA = [
 const IssuesTable = ({}) => {
   return (
     <>
-      <div className=" border-4 bg-slate-50">
+      <div className=" shadow-md border-2 bg-slate-50 mt-6">
         <table className="w-full">
           <thead>
             <tr className="border-b-2">
