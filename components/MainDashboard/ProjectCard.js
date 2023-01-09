@@ -13,6 +13,8 @@ const ProjectCard = ({ title, issueNumber, last24, status, lang }) => {
               <h4 className="text-xl">{title}</h4>
               <p className="items-center text-lg">{lang}</p>
 
+              {/* not sure if I want to display the lang as a
+               pill or next to the title */}
               {/* <span className="flex flex-col text-sm rounded-xl ml-auto justify-center bg-blue-300 items-center w-16 h-8ml-auto">
                 {lang}
               </span> */}
