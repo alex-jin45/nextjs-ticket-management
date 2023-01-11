@@ -5,7 +5,7 @@ import { Line } from "react-chartjs-2";
 const ActivityGraph = ({}) => {
   const labels = ["", "", "", "", "", "Users", "", "", "", "", ""];
 
-  const data = [0, 60, 75, 32, 55, 22, 12, 90, 64, 77, 10];
+  const data = [0, 60, 75, 32, 55, 22, 12, 90, 64, 77, 8];
 
   const datasets = [
     {
@@ -17,7 +17,7 @@ const ActivityGraph = ({}) => {
 
   return (
     <>
-      <div className="flex">
+      <div className="flex w-3/5 h-3/5 mt-5">
         <Line
           datasetIdKey="id"
           data={{
