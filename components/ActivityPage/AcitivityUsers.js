@@ -7,12 +7,20 @@ const ActivityUsers = ({}) => {
             <thead>
               <tr className="border-b-2 ">
                 <th className="p-3 text-center">Name</th>
-                <th className="p-3 text-center"># of Issue Reported</th>
+                <th className="p-3 text-center"># of Issue Resolved</th>
               </tr>
 
               <tr className="">
                 <td className="text-center">John Smith</td>
-                <td className="text-center">4</td>
+                <td className="text-center">44</td>
+              </tr>
+              <tr className="">
+                <td className="text-center">John Smith</td>
+                <td className="text-center">24</td>
+              </tr>
+              <tr className="">
+                <td className="text-center">John Smith</td>
+                <td className="text-center">14</td>
               </tr>
             </thead>
           </table>
