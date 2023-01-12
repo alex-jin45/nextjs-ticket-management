@@ -1,4 +1,5 @@
 import TableRow from "./TableRow";
+import { motion } from "framer-motion";
 
 const TABLE_DATA = [
   {
@@ -36,7 +37,10 @@ const TABLE_DATA = [
 const IssuesTable = ({}) => {
   return (
     <>
-      <div className=" shadow-md border-2 bg-slate-50 mt-6">
+      <motion.div
+        animate={{ y: 5 }}
+        className=" shadow-md border-2 bg-slate-50 mt-6"
+      >
         <table className="w-full">
           <thead>
             <tr className="border-b-2">
@@ -62,7 +66,7 @@ const IssuesTable = ({}) => {
             })}
           </tbody>
         </table>
-      </div>
+      </motion.div>
     </>
   );
 };

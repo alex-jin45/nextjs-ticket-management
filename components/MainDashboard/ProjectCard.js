@@ -1,12 +1,14 @@
 import { FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 
+import { motion } from "framer-motion";
+
 const ProjectCard = ({ title, issueNumber, last24, status, lang }) => {
   // not sure how to do Icon - maybe useState?
 
   return (
     <>
-      <div className="inline-block  ">
-        <div className="flex shadow-lg ml-5 mt-8 justify-center rounded-lg h-64 bg-red-500">
+      <motion.div className="inline-block" whileHover={{ scale: 1.1 }}>
+        <div className="flex shadow-lg  hover:border-4 ml-5 mt-8 justify-center rounded-lg h-64 bg-red-500">
           <div className="block p-8">
             <div className="flex items-center gap-4 mb-8">
               <FaReact className=" text-blue-600 bg-red-100 rounded-full w-10 h-10 " />
@@ -39,7 +41,7 @@ const ProjectCard = ({ title, issueNumber, last24, status, lang }) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
