@@ -15,7 +15,7 @@ const TableRow = ({
           <FaReact className="mr-4 text-2xl" />
           <div>
             <div>
-              <span>{errorType} :&nbsp;</span>
+              <span>{errorType} </span>
               <span>{errorDesc}</span>
             </div>
             <div>

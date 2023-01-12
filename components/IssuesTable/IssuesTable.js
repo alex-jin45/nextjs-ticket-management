@@ -24,10 +24,11 @@ const IssuesTable = ({}) => {
   return (
     <>
       <motion.div
-        animate={{ y: 12 }}
-        className="w-11/12 h-screen overflow-y-hiddden shadow-md border-2 bg-slate-50 mt-4"
+        animate={{ y: 15 }}
+        transition={{ type: "spring", stiffness: 100 }}
+        className="w-11/12 h-full overflow-y-hiddden mt-4"
       >
-        <table className="lg:w-full  lg:h-full md:w-fit md:h-fit">
+        <table className="lg:w-full bg-slate-100 border-2 shadow-md   lg:h-full md:w-fit md:h-fit">
           <thead>
             <tr className="border-b-2">
               <th className="p-3 text-left">Issue</th>

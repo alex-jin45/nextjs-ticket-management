@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// nav bar from https://larainfo.com/blogs/tailwind-css-simple-sidebar-ui-example
-
 const Navigation = ({ children }) => {
   const router = useRouter();
 
@@ -26,7 +24,7 @@ const Navigation = ({ children }) => {
                     }`}
                     href="/dashboard"
                   >
-                    <span className="mx-4 font-medium">Dashboard</span>
+                    <span className="mx-4 ">Dashboard</span>
                   </Link>
                 </li>
 
@@ -39,7 +37,7 @@ const Navigation = ({ children }) => {
                     }`}
                     href="/dashboard/issues"
                   >
-                    <span className="mx-4 font-medium">Issues</span>
+                    <span className="mx-4 ">Issues</span>
                   </Link>
                 </li>
                 <li>
@@ -51,7 +49,7 @@ const Navigation = ({ children }) => {
                     }`}
                     href="/dashboard/activity"
                   >
-                    <span className="mx-4 font-medium">Activity</span>
+                    <span className="mx-4 ">Activity</span>
                   </Link>
                 </li>
                 <li>
@@ -63,7 +61,7 @@ const Navigation = ({ children }) => {
                     }`}
                     href="/dashboard/settings"
                   >
-                    <span className="mx-4 font-medium">Settings</span>
+                    <span className="mx-4 ">Settings</span>
                   </Link>
                 </li>
               </ul>
