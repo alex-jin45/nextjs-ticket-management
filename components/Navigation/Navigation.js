@@ -6,7 +6,7 @@ const Navigation = ({ children }) => {
 
   return (
     <div className="flex font-mono">
-      <div className="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto border-r">
+      <div className="flex flex-col w-64  px-4 py-8 overflow-y-auto border-r h-[100vh]">
         <h2 className="text-3xl font-semibold text-center text-blue-800">
           LOGGR
         </h2>
