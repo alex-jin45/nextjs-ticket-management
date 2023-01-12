@@ -1,111 +1,16 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { use, useState } from "react";
-
 import Pagination from "./Pagination";
+import { TABLE_DATA } from "../../data/issues";
 import TableRow from "./TableRow";
-
-const TABLE_DATA = [
-  {
-    id: 1,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 2,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 3,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 4,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 5,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 6,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 7,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 8,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-  {
-    id: 9,
-    page: 1,
-    errorType: "Type Error :",
-    errorDesc: "Cannot read properties of undefined (reading length)",
-    errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
-    status: "Error",
-    numEvents: 105,
-    usersEffected: 105,
-  },
-];
-
-console.log(TABLE_DATA.length);
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const IssuesTable = ({}) => {
   const [issuePosts, setIssuesPosts] = useState(TABLE_DATA);
   const [currentPage, setCurrentPage] = useState(1);
-  const [recordsPerPage] = useState(9);
+  const [postsPerPage] = useState(10);
 
-  const indexOfLastPost = currentPage * recordsPerPage;
-  const indexOfFirstPost = indexOfLastPost - recordsPerPage;
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = issuePosts.slice(indexOfFirstPost, indexOfLastPost);
 
   const goToNextPage = () => {
@@ -120,9 +25,9 @@ const IssuesTable = ({}) => {
     <>
       <motion.div
         animate={{ y: 12 }}
-        className="w-full h-screen shadow-md border-2 bg-slate-50 mt-4"
+        className="w-11/12 h-screen overflow-y-hiddden shadow-md border-2 bg-slate-50 mt-4"
       >
-        <table className="lg:w-full lg:h-full md:w-fit md:h-fit">
+        <table className="lg:w-full  lg:h-full md:w-fit md:h-fit">
           <thead>
             <tr className="border-b-2">
               <th className="p-3 text-left">Issue</th>
@@ -145,17 +50,17 @@ const IssuesTable = ({}) => {
                 />
               );
             })}
-            <div className="flex items-center lg:w-full lg:h-full md:w-fit md:h-fit md:p-8 lg:p-4 lg:ml-auto">
-              <Pagination
-                postsPerPage={recordsPerPage}
-                totalPosts={TABLE_DATA.length}
-                pageForward={goToNextPage}
-                pageBack={goToPrevPage}
-                currentPage={currentPage}
-              />
-            </div>
           </tbody>
         </table>
+        <div className="flex justify-center items-center pt-4 ">
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={issuePosts.length}
+            pageForward={goToNextPage}
+            pageBack={goToPrevPage}
+            currentPage={currentPage}
+          />
+        </div>
       </motion.div>
     </>
   );

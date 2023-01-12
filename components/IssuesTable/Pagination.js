@@ -29,7 +29,7 @@ const Pagination = ({
               onClick={() => {
                 pageBack();
               }}
-              className="flex w-32 justify-center items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm  text-gray-500 hover:bg-gray-50"
+              className="flex text-black w-32 justify-center items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm   hover:bg-gray-50"
             >
               <span>Previous</span>
             </a>
@@ -40,7 +40,7 @@ const Pagination = ({
               onClick={() => {
                 pageForward();
               }}
-              className="flex w-32 justify-center items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm  text-gray-500 hover:bg-gray-50"
+              className="flex text-black w-32 justify-center items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm  hover:bg-gray-50"
             >
               <span>Next</span>
             </a>
