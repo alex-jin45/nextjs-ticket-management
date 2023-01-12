@@ -1,5 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { use, useState } from "react";
 
+import Pagination from "./Pagination";
 import TableRow from "./TableRow";
 
 const TABLE_DATA = [
@@ -75,7 +77,7 @@ const TABLE_DATA = [
   },
   {
     id: 8,
-    page: 2,
+    page: 1,
     errorType: "Type Error :",
     errorDesc: "Cannot read properties of undefined (reading length)",
     errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
@@ -85,7 +87,7 @@ const TABLE_DATA = [
   },
   {
     id: 9,
-    page: 2,
+    page: 1,
     errorType: "Type Error :",
     errorDesc: "Cannot read properties of undefined (reading length)",
     errorLoc: "at eval (webpack-internal:///./pages/index.tsx:37:7)",
@@ -95,7 +97,25 @@ const TABLE_DATA = [
   },
 ];
 
+console.log(TABLE_DATA.length);
+
 const IssuesTable = ({}) => {
+  const [issuePosts, setIssuesPosts] = useState(TABLE_DATA);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [recordsPerPage] = useState(9);
+
+  const indexOfLastPost = currentPage * recordsPerPage;
+  const indexOfFirstPost = indexOfLastPost - recordsPerPage;
+  const currentPosts = issuePosts.slice(indexOfFirstPost, indexOfLastPost);
+
+  const goToNextPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const goToPrevPage = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
   return (
     <>
       <motion.div
@@ -112,7 +132,7 @@ const IssuesTable = ({}) => {
             </tr>
           </thead>
           <tbody className="">
-            {TABLE_DATA.map((item) => {
+            {currentPosts.map((item) => {
               return (
                 <TableRow
                   key={item.id}
@@ -125,10 +145,16 @@ const IssuesTable = ({}) => {
                 />
               );
             })}
+            <div className="flex items-center lg:w-full lg:h-full md:w-fit md:h-fit md:p-8 lg:p-4 lg:ml-auto">
+              <Pagination
+                postsPerPage={recordsPerPage}
+                totalPosts={TABLE_DATA.length}
+                pageForward={goToNextPage}
+                pageBack={goToPrevPage}
+                currentPage={currentPage}
+              />
+            </div>
           </tbody>
-          <div className="flex items-center lg:w-full lg:h-full md:w-fit md:h-fit md:p-8">
-            <button className="ml-auto ">Next Page</button>
-          </div>
         </table>
       </motion.div>
     </>

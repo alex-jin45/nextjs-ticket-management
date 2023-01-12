@@ -19,8 +19,10 @@ const Navigation = ({ children }) => {
               <ul>
                 <li>
                   <Link
-                    className={`flex items-center px-4 py-2 text-gray-700  rounded-md ${
-                      router.pathname === "/dashboard" ? "bg-gray-400" : null
+                    className={`flex items-center px-4 py-2  rounded-md ${
+                      router.pathname === "/dashboard"
+                        ? "bg-gray-400 text-black"
+                        : null
                     }`}
                     href="/dashboard"
                   >
@@ -30,9 +32,9 @@ const Navigation = ({ children }) => {
 
                 <li>
                   <Link
-                    className={`flex items-center px-4 py-2 mt-5 text-gray-800 rounded-md hover:bg-gray-200 ${
+                    className={`flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-200 ${
                       router.pathname === "/dashboard/issues"
-                        ? "bg-gray-400"
+                        ? "bg-gray-400 text-black"
                         : null
                     }`}
                     href="/dashboard/issues"
@@ -42,9 +44,9 @@ const Navigation = ({ children }) => {
                 </li>
                 <li>
                   <Link
-                    className={`flex items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200 ${
+                    className={`flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-200 ${
                       router.pathname === "/dashboard/activity"
-                        ? "bg-gray-400"
+                        ? "bg-gray-400 text-black"
                         : null
                     }`}
                     href="/dashboard/activity"
@@ -54,9 +56,9 @@ const Navigation = ({ children }) => {
                 </li>
                 <li>
                   <Link
-                    className={`flex items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200 ${
+                    className={`flex items-center px-4 py-2 mt-5 rounded-md hover:bg-gray-200 ${
                       router.pathname === "/dashboard/settings"
-                        ? "bg-gray-400"
+                        ? "bg-gray-400 text-black"
                         : null
                     }`}
                     href="/dashboard/settings"
