@@ -3,8 +3,6 @@ import { FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const ProjectCard = ({ title, issueNumber, last24, status, lang }) => {
-  // not sure how to do Icon - maybe useState?
-
   return (
     <>
       <motion.div className="inline-block" whileHover={{ scale: 1.1 }}>
@@ -14,12 +12,6 @@ const ProjectCard = ({ title, issueNumber, last24, status, lang }) => {
               <FaReact className=" text-blue-600 bg-red-100 rounded-full w-10 h-10 " />
               <h4 className="text-xl">{title}</h4>
               <p className="items-center text-lg">{lang}</p>
-
-              {/* not sure if I want to display the lang as a
-               pill or next to the title */}
-              {/* <span className="flex flex-col text-sm rounded-xl ml-auto justify-center bg-blue-300 items-center w-16 h-8ml-auto">
-                {lang}
-              </span> */}
             </div>
 
             <div className="flex gap-16 mb-8 items-center text-xl">
